@@ -1,7 +1,5 @@
 import React, { useState } from "react"
 import { setSearchUrlFriendly, onlyAlphanumericAndSpace } from "../../components/Utils"
-// import { Logo } from "../Logo"
-// import { Bell } from "../Icons"
 import {
   HeaderContainer,
   HeaderSearchForm,
