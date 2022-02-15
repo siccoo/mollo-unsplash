@@ -1,9 +1,14 @@
+import {BrowserRouter} from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 
-
-function App() {
+const App = () => {
   return (
-    <div>Mollo
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+      
+      </BrowserRouter>
+    </Provider>
   );
 }
 
