@@ -1,9 +1,9 @@
 import { Route, Switch } from "react-router-dom";
 
-import Home from "../../layout/home";
-import Collections from "../../layout/collections";
-import Search from "../../layout/search";
-import NotFound from "../../layout/notFound";
+import Home from "../../layout/Home";
+import Collections from "../../layout/Collections";
+import Search from "../../layout/Search";
+import NotFound from "../../layout/NotFound";
 
 const Routes = () => {
 <Switch>

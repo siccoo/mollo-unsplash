@@ -2,15 +2,18 @@ import React from 'react'
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-// import Header from "../Header";
+import Header from "../Header";
 import Routes from "../Routes"
 
-const Main = () => {
-  return (
-    <>
-    {/* <R */}
-    </>
-  )
+const Main = ({ menus, session }) => {
+    return (
+        <>
+            <Header />
+            <Routes menus={menus} session={session} />
+        </>
+    )
 }
 
-export default Main; 
+const mapStateToProps = (state) => ({})
+
+export default withRouter(connect(mapStateToProps)(Main)); 
