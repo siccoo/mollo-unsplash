@@ -1,17 +1,24 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
-import store from "./store";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Main from "./components/Main";
+import Home from "./pages/Home";
+import Collections from "./pages/Collections";
+import Search from "./pages/Search";
+import NotFound from "./pages/NotFound";
 
 const App = () => {
   return (
-    <Provider store={store}>
-      <BrowserRouter>
-        <Main />
-      </BrowserRouter>
-    </Provider>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/collections" component={Collections} />
+          <Route path="/search/:type/:query" component={Search} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+    </>
+
   );
 }
 

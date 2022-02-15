@@ -1,12 +1,12 @@
 import styled from "styled-components"
 
 export const HeaderContainer = styled.div`
-  background: #fff;
+  background: #DDE2E8;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  height: 62px;
+  height: 250px;
   border-bottom: 1px solid #eee;
   position: fixed;
   width: 100%;
@@ -26,15 +26,18 @@ export const HeaderSearchForm = styled.form`
 `
 
 export const HeaderSearchInput = styled.input`
-  width: 100%;
+  width: 70%;
   border: 1px solid #eee;
-  border-radius: 24px;
+  border-radius: 4px;
   transition: 0.35s;
-  height: 40px;
-  background: #eee url("/assets/img/search.svg") left no-repeat;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  background: #FFF url("/assets/img/search.svg") left no-repeat;
   background-size: 15px;
   background-position-x: 12px;
   padding-left: 40px;
+  margin: auto;
   :hover {
     border: 1px solid #ccc;
   }
