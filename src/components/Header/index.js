@@ -11,7 +11,17 @@ const Header = () => {
     query: "",
   }
 
-  const [state, setState] = useState(INITIAL_STATE)
+  // bdfPDt7lIEiUnfsHY5D6YabwsRVb8LZZ-uYjpEdiRaM
+
+  const [state, setState] = useState(INITIAL_STATE);
+
+  const fetchImages = () => {
+    fetch(`https://api.unsplash.com/search/photos?client_id=bdfPDt7lIEiUnfsHY5D6YabwsRVb8LZZ-uYjpEdiRaM&query=${state}`)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
+  }
 
   const onChangeInput = (e) => {
     const query = onlyAlphanumericAndSpace(e.target.value)
@@ -31,7 +41,8 @@ const Header = () => {
       >
         <HeaderSearchInput type="text" placeholder="Search photos..." 
         onChange={onChangeInput} 
-        value={state.query} 
+        value={state.query}
+        onClick={() => fetchImages()} 
         />
       </HeaderSearchForm>
     </HeaderContainer>
