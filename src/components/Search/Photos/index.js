@@ -1,7 +1,7 @@
 import React from "react"
 
-const SearchPhotos = (props) => {
-  return <div>{props.query}</div>
-}
+// const SearchPhotos = (props) => {
+//   return <div>{props.query}</div>
+// }
 
-export default SearchPhotos
+// export default SearchPhotos
