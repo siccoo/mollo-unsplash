@@ -45,6 +45,7 @@ a:hover {
 .mollo-img {
   width: 30%;
   margin: 5px;
+  border-radius: 4px;
 }
 
 .shadowed {
